@@ -1,4 +1,4 @@
-# Đệ quy
+# Đệ quy -- vẫn gặp lỗi runtime
 # def countOccurences(arrayIndex: int, stringArray, queryString):
 
 #     if arrayIndex < 0:
