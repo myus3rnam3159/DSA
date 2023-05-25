@@ -24,3 +24,15 @@ Phép XOR (Exclusive OR) là một phép toán bitwise (bitwise operation) trong
         Giống với vòng lặp while, nhưng kiểm tra điều kiện sau mỗi lần lặp.
         Đảm bảo thực hiện ít nhất một lần lặp trước khi kiểm tra điều kiện.
         Thích hợp cho việc yêu cầu thực hiện ít nhất một lần lặp trước khi kiểm tra điều kiện dừng.
+
+*** Phép dịch bit trái '<<' ***
+
+L trong Java có nghĩa là long
+
+Cụ thể, biểu thức (1L << 32) - 1 có nghĩa là:
+
+    1. 1L là số 1 kiểu long (giả sử đang ở dạng 32 bit): 31 số 0 và 1 số 1: 0..001
+    2. << 32: dịch số 1 sang trái 32 bit nên số một sẽ ở vị trí 33: 10...000
+    3. phép trừ 1 thí sẽ đảo bit (0 thành 1, 1 thành 0) nên ta có: 01...111, nếu bỏ số 0 ở bên trái ngoài cùng ta được 32bit 1
+    4. Đổi số cần chuyển ra hệ nhị phân 32 bit và XOR 32 bit 1 trên
+    5. Chuyển số vừa cho về lại hệ 10.
