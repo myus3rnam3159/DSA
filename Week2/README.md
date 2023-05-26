@@ -47,6 +47,18 @@ Cụ thể, biểu thức (1L << 32) - 1 có nghĩa là:
     
         a. Giá trị của phần từ trong mảng sắp xếp chính là chỉ số trên mảng đếm
 
+        b. Duyệt qua mảng cần sắp:
+
+            Với mỗi phần từ trong mảng sắp có giá trị v
+            Mảng đếm tại vị trí v tương ứng sẽ cộng thêm 1
+    
+        c. Xóa hết phần từ trong mảng sắp ban đầu
+        d. Duyệt qua mảng đếm
+
+            Với mỗi phần từ v1 khác 0 trong mảng đếm:
+                Lấy chỉ số của v1 là index
+                Thêm Giá trị của index vào mảng sắp đúng với số lần v1
+
 * Chú ý: toán tử tăng tiền tố
 
     về mặt tối ưu, có một cách khác mà bạn có thể sử dụng để tăng giá trị của phần tử trong mảng lên một đơn vị, đó là sử dụng toán tử tăng tiền tố ++ thay vì toán tử hậu tố ++. Toán tử tăng tiền tố sẽ trả về giá trị mới của phần tử sau khi đã tăng, trong khi toán tử tăng hậu tố trả về giá trị ban đầu và thực hiện tăng giá trị sau đó.
