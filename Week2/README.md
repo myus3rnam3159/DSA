@@ -36,3 +36,17 @@ Cụ thể, biểu thức (1L << 32) - 1 có nghĩa là:
     3. phép trừ 1 thí sẽ đảo bit (0 thành 1, 1 thành 0) nên ta có: 01...111, nếu bỏ số 0 ở bên trái ngoài cùng ta được 32bit 1
     4. Đổi số cần chuyển ra hệ nhị phân 32 bit và XOR 32 bit 1 trên
     5. Chuyển số vừa cho về lại hệ 10.
+
+*** Giải thích thuật toán count sort ***
+
+* Điều kiện cần: phần tử mảng là số nguyên lớn hơn -1
+
+    1. Lấy độ dài của mảng cần được sắp xếp.
+
+    2. Tạo mảng đếm số lần xuất hiện của phần tử trong mảng cần sắp xếp (độ dài bằng giá trị lớn nhất của mảng sắp xếp + 1)
+    
+        a. Giá trị của phần từ trong mảng sắp xếp chính là chỉ số trên mảng đếm
+
+* Chú ý: toán tử tăng tiền tố
+
+    về mặt tối ưu, có một cách khác mà bạn có thể sử dụng để tăng giá trị của phần tử trong mảng lên một đơn vị, đó là sử dụng toán tử tăng tiền tố ++ thay vì toán tử hậu tố ++. Toán tử tăng tiền tố sẽ trả về giá trị mới của phần tử sau khi đã tăng, trong khi toán tử tăng hậu tố trả về giá trị ban đầu và thực hiện tăng giá trị sau đó.
