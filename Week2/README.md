@@ -62,3 +62,11 @@ Cụ thể, biểu thức (1L << 32) - 1 có nghĩa là:
 * Chú ý: toán tử tăng tiền tố
 
     về mặt tối ưu, có một cách khác mà bạn có thể sử dụng để tăng giá trị của phần tử trong mảng lên một đơn vị, đó là sử dụng toán tử tăng tiền tố ++ thay vì toán tử hậu tố ++. Toán tử tăng tiền tố sẽ trả về giá trị mới của phần tử sau khi đã tăng, trong khi toán tử tăng hậu tố trả về giá trị ban đầu và thực hiện tăng giá trị sau đó.
+
+*** Giải thích thuật toán Pangrams ***
+
+Trong câu lệnh index = str.charAt(i) - 'A';, việc trừ 'A' từ str.charAt(i) được thực hiện để tính toán sự chênh lệch giữa mã Unicode của ký tự hiện tại và mã Unicode của ký tự 'A'. Điều này cho phép chúng ta xác định vị trí tương ứng của chữ cái trong bảng chữ cái.
+
+Mã Unicode của chữ cái 'A' là một giá trị tham chiếu (thường là 65) và các chữ cái tiếp theo trong bảng chữ cái tiếp tục tăng dần. Do đó, khi chúng ta trừ 'A' khỏi ký tự hiện tại (str.charAt(i)), chúng ta thu được một giá trị tương ứng với vị trí của chữ cái trong bảng chữ cái.
+
+Ví dụ, nếu ký tự hiện tại là 'C', thì mã Unicode của nó là 67. Khi ta thực hiện phép tính 'C' - 'A', ta sẽ có kết quả là 67 - 65 = 2. Điều này có nghĩa rằng chữ cái 'C' được chuyển đổi thành chỉ số 2 trong mảng alphabet. Bằng cách sử dụng chỉ số này, chúng ta có thể đánh dấu chữ cái 'C' đã xuất hiện trong chuỗi.
