@@ -70,3 +70,18 @@ Trong câu lệnh index = str.charAt(i) - 'A';, việc trừ 'A' từ str.charAt
 Mã Unicode của chữ cái 'A' là một giá trị tham chiếu (thường là 65) và các chữ cái tiếp theo trong bảng chữ cái tiếp tục tăng dần. Do đó, khi chúng ta trừ 'A' khỏi ký tự hiện tại (str.charAt(i)), chúng ta thu được một giá trị tương ứng với vị trí của chữ cái trong bảng chữ cái.
 
 Ví dụ, nếu ký tự hiện tại là 'C', thì mã Unicode của nó là 67. Khi ta thực hiện phép tính 'C' - 'A', ta sẽ có kết quả là 67 - 65 = 2. Điều này có nghĩa rằng chữ cái 'C' được chuyển đổi thành chỉ số 2 trong mảng alphabet. Bằng cách sử dụng chỉ số này, chúng ta có thể đánh dấu chữ cái 'C' đã xuất hiện trong chuỗi.
+
+*** Giải thích thuật toán Flipping The Matrix ***
+
+* Cho ma trận 2n x 2n
+
+* Xoay bất kỳ hàng và cột trong ma trận trên sao cho tổng các phấn tử trong ma trận n x n ở góc trái trên của ma trận gốc là lớn nhất
+
+* Giải
+
+    1. Với mỗi phần từ p trong ma trận con c (n x n) theo hàng ngang
+
+        a. So sánh nó và các phần tử đổi xứng hàng, góc, cột để tìm giá trị lớn nhất
+        b. Xoay cột, hàng tùy ý như xoay một mặt rubik để đưa giá trị lớn nhất để thay thế p.
+        d. Tính tổng các phần tử trong ma trận.
+    
