@@ -84,4 +84,3 @@ Ví dụ, nếu ký tự hiện tại là 'C', thì mã Unicode của nó là 67
         a. So sánh nó và các phần tử đổi xứng hàng, góc, cột để tìm giá trị lớn nhất
         b. Xoay cột, hàng tùy ý như xoay một mặt rubik để đưa giá trị lớn nhất để thay thế p.
         d. Tính tổng các phần tử trong ma trận.
-    
