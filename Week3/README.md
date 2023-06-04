@@ -22,4 +22,20 @@ Thuật toán Heap Sort sử dụng heap để xây dựng một cây nhị phâ
     
     c. A[i] hoặc B[i] là thành phần tạo nên tổng >= k nên sẽ có chênh lệnh A[i] >= B[i] hoặc ngược lại để bù trừ cho nhau thõa mãn điều kiện (trườ)
 
-    d. Vì ta không nắm được giá trị các phần từ nằm ở đâu trong mảng nên nếu lấy 2 phần tử lớn nhất cộng lại thì khả năng phần dư sẽ rất lớn so với k, mà trong khi đó ta chỉ cần thõa mãn điều kiện với tối thiểu nhưng phải áp dụng cho toàn bộ mảng A và B nên tốt nhất là lấy lớn nhất của A cộng với nhỏ nhất của B theo nguyên tắc bù trừ 
+    d. Vì ta không nắm được giá trị các phần từ nằm ở đâu trong mảng nên nếu lấy 2 phần tử lớn nhất cộng lại thì khả năng phần dư sẽ rất lớn so với k, mà trong khi đó ta chỉ cần thõa mãn điều kiện với tối thiểu nhưng phải áp dụng cho toàn bộ mảng A và B nên tốt nhất là lấy lớn nhất của A cộng với nhỏ nhất của B theo nguyên tắc bù trừ.
+
+*** Giải thích thuật toán Subarray Division ***
+
+* Cho mảng số nguyên n
+
+* Tính số lần có thể bốc ra bộ liên tiếp m các số sao cho tổng của chúng bằng d
+
+* Chạy từ chỉ số 0 đến m - 1: Tính tổng các số nguyên trong dãy và kiểm tra
+* Từ chỉ số m đến n - 1: Lấy tổng đã tính bớt đi số nguyên cộng vào tổng ở đầu tiên, thay vào đó bằng số có chỉ số m -> kiểm tra
+* Tiếp tục dịch lên từng ô một trong mảng như vậy và kiểm tra. 
+
+*** Giải thich thuật toán Xor String ***
+
+Cú pháp của toán tử điều kiện là condition ? expression1 : expression2. Nó hoạt động như sau: nếu condition đúng (true), giá trị của toán tử sẽ là expression1, ngược lại, nếu condition sai (false), giá trị của toán tử sẽ là expression2.
+
+
