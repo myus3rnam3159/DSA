@@ -38,4 +38,22 @@ Thuật toán Heap Sort sử dụng heap để xây dựng một cây nhị phâ
 
 Cú pháp của toán tử điều kiện là condition ? expression1 : expression2. Nó hoạt động như sau: nếu condition đúng (true), giá trị của toán tử sẽ là expression1, ngược lại, nếu condition sai (false), giá trị của toán tử sẽ là expression2.
 
+*** Thuật toán Quick sort ***
 
+Giải thích và mô tả: https://www.geeksforgeeks.org/quick-sort/
+
+* Chú ý: tại sao 'i + 1' : bởi hàm swap đã thay đổi thứ tự của giá trị nhưng biến i vẫn đang vị trí cũ nên phải + 1 mới ra vị trí mới đã được swap trước đó.
+* i + 1 sẽ không bao h chạm đến high.
+
+*** Thuật toán đếm cặp tất ***
+
+* Sử dụng HashMap trong lập trình đơn luồng
+* Sử dụng HashTable trong lập trình đa luồng
+
+    Đồng bộ hóa: Hashtable là một lớp đồng bộ, có nghĩa là nó đảm bảo tính nhất quán và an toàn trong các môi trường đa luồng (multi-threaded). Các phương thức của Hashtable được đồng bộ hóa, vì vậy nhiều luồng có thể truy cập và sửa đổi Hashtable một cách an toàn. Trong khi đó, HashMap không đồng bộ hóa, nghĩa là nó không đảm bảo an toàn khi sử dụng trong các môi trường đa luồng. Nếu bạn cần sử dụng một từ điển trong một môi trường đa luồng, Hashtable là một lựa chọn tốt hơn.
+
+    Thứ tự: Hashtable đảm bảo thứ tự của các cặp key-value. Khi bạn lặp lại qua các phần tử của Hashtable, bạn sẽ nhận được các phần tử theo thứ tự chúng được thêm vào. Ngược lại, HashMap không đảm bảo thứ tự của các cặp key-value. Khi bạn lặp lại qua các phần tử của HashMap, thứ tự có thể thay đổi theo cách không xác định.
+
+    Cho phép giá trị null: HashMap cho phép sử dụng key và value null. Bạn có thể thêm một cặp key-value với key hoặc value là null. Trong khi đó, Hashtable không cho phép sử dụng giá trị null. Nếu bạn thử thêm một key hoặc value null vào Hashtable, nó sẽ ném ra ngoại lệ NullPointerException.
+
+    Hiệu suất: Về mặt hiệu suất, HashMap thường nhanh hơn Hashtable. Hashtable có một overhead nhỏ hơn do đồng bộ hóa, trong khi HashMap không có overhead này. Trong hầu hết các tình huống, HashMap có hiệu suất tốt hơn Hashtable.
