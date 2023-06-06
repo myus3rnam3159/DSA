@@ -47,6 +47,8 @@ Giải thích và mô tả: https://www.geeksforgeeks.org/quick-sort/
 
 *** Thuật toán đếm cặp tất ***
 
+*Tóm lại, nếu bạn chỉ cần đếm số lượng cặp tất và không quan tâm đến số lần xuất hiện của mỗi màu, thì HashSet là tối ưu hơn. Tuy nhiên, nếu bạn muốn biết số lần xuất hiện của mỗi màu cũng như đếm số lượng cặp tất, thì HashMap là lựa chọn tối ưu hơn.
+
 * Sử dụng HashMap trong lập trình đơn luồng
 * Sử dụng HashTable trong lập trình đa luồng
 
@@ -57,3 +59,16 @@ Giải thích và mô tả: https://www.geeksforgeeks.org/quick-sort/
     Cho phép giá trị null: HashMap cho phép sử dụng key và value null. Bạn có thể thêm một cặp key-value với key hoặc value là null. Trong khi đó, Hashtable không cho phép sử dụng giá trị null. Nếu bạn thử thêm một key hoặc value null vào Hashtable, nó sẽ ném ra ngoại lệ NullPointerException.
 
     Hiệu suất: Về mặt hiệu suất, HashMap thường nhanh hơn Hashtable. Hashtable có một overhead nhỏ hơn do đồng bộ hóa, trong khi HashMap không có overhead này. Trong hầu hết các tình huống, HashMap có hiệu suất tốt hơn Hashtable.
+
+    HashSet:
+        HashSet là một tập hợp (set) không chứa các phần tử trùng lặp.
+        Nó được cài đặt bằng cách sử dụng bảng băm (hash table) và chỉ lưu trữ các phần tử (keys) mà không có giá trị (values) đi kèm.
+        HashSet đảm bảo rằng không có hai phần tử trùng lặp trong tập hợp.
+        Thao tác thêm, xóa và kiểm tra sự tồn tại của một phần tử trong HashSet có độ phức tạp trung bình là O(1).
+
+    HashMap:
+        HashMap là một bảng băm (hash table) lưu trữ các phần tử theo cặp key-value.
+        Nó sử dụng hàm băm để ánh xạ key thành vị trí lưu trữ.
+        HashMap cho phép lưu trữ các phần tử có cùng key, nhưng chỉ giá trị mới nhất được lưu trữ và các giá trị trước đó bị ghi đè.
+        Thao tác thêm, xóa và truy xuất phần tử trong HashMap có độ phức tạp trung bình là O(1).
+        HashMap không đảm bảo thứ tự của các phần tử, trong khi TreeSet duy trì thứ tự được xác định (theo natural ordering hoặc Comparator).
