@@ -3,6 +3,7 @@ import java.util.List;
 
 public class BetweenTwoSets {
 
+    // Euclidean algorithm
     private static int gcd(int a, int b) {
         if (b == 0)
             return a;
