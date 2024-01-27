@@ -4,6 +4,7 @@ import java.util.List;
 public class BetweenTwoSets {
 
     // Euclidean algorithm
+    //
     private static int gcd(int a, int b) {
         if (b == 0)
             return a;
@@ -19,10 +20,12 @@ public class BetweenTwoSets {
         int lcmOfA = a.get(0);
         int gcdOfB = b.get(0);
 
+        //Tìm bội chung nhỏ nhất trong mảng a
         for (int number : a) {
             lcmOfA = lcm(lcmOfA, number);
         }
 
+        //Tìm ước chung lớn nhất trong mảng b
         for (int number : b) {
             gcdOfB = gcd(gcdOfB, number);
         }
