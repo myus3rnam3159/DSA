@@ -181,9 +181,7 @@ public class VisitorPattern {
                 map.put(v, vNeighbors);
             }
             vNeighbors.add(u);
-map.computeIfAbsent(u, k -> new HashSet<Integer>()).add(v);
             
-
         }
         scanner.close();
         if(n == 1) return new TreeLeaf(values[n-1], colors[n-1], 0);
