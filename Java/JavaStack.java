@@ -16,7 +16,7 @@ public class JavaStack {
     
 
     };
-    private static final Stack<Character> stack = new Stack<Character>();
+    
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
@@ -44,5 +44,6 @@ public class JavaStack {
                 System.out.println("true");
             }
         }
+        sc.close();
     }
 }
