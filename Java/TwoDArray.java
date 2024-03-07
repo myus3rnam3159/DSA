@@ -12,9 +12,7 @@ import static java.util.stream.Collectors.toList;
 
 
 class TwoDArray{
-    private static PriorityQueue<Integer> priorityQueue = new PriorityQueue<Integer>(
-        (a, b) -> b - a
-            );
+    
     public static void main(String[] args) throws IOException{
         Scanner sc = new Scanner(System.in);
 
@@ -32,7 +30,7 @@ class TwoDArray{
                 }
             );
 
-        
+        int max = Integer.MIN_VALUE;
         for (int i = 0; i < 4; ++i){
             for (int j = 0; j < 4; ++j){
                 
@@ -41,11 +39,12 @@ class TwoDArray{
                 int middle = arr.get(i + 1).get(j + 1);
 
                 int bottom = arr.get(i + 2).get(j) + arr.get(i + 2).get(j + 1) + arr.get(i + 2).get(j + 2);
-                priorityQueue.add(top + middle + bottom);
+
+                max = Math.max(max, top + middle + bottom);
             }
         }
 
-        System.out.print(priorityQueue.poll());
+        System.out.print(max);
         
         sc.close();
     }
