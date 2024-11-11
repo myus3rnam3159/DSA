@@ -13,7 +13,6 @@ public class HIndex {
             }
         }
 
-
         int i = temp.length;
         int cites = temp[i-1];
 
