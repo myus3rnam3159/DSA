@@ -10,5 +10,7 @@ public class Main {
         }
 
         System.out.println("Sentence from customed StringBuilder: " + builder.toString());
+
+        System.out.println(ApiKeyGener.getAPIKey());
     }
 }
